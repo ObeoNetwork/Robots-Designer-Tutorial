@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- The icon can be used freely in both personal and commercial projects with no attribution required, but always appreciated. 
+You may NOT sub-license, resell, rent, redistribute or otherwise transfer the icon without express written permission from iconmonstr.com -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="50.000004"
+   height="53.572071"
+   viewBox="0 0 50.000004 53.572071"
+   enable-background="new 0 0 512 512"
+   xml:space="preserve"
+   id="svg2"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="RotateLeft.svg"><metadata
+   id="metadata9"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs7" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1680"
+   inkscape:window-height="987"
+   id="namedview5"
+   showgrid="false"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0"
+   inkscape:zoom="1.3037281"
+   inkscape:cx="-0.91001436"
+   inkscape:cy="17.378304"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg2" />
+
+<path
+   id="undo-2-icon"
+   d="m 42.154587,7.8451726 c -10.444542,-10.44467 -27.368608,-10.46001 -37.83291,-0.0472 L 0.01365,3.4898126 0,19.462453 l 15.972636,-0.0137 -4.074623,-4.07449 c 6.280324,-6.2285704 16.420071,-6.2132304 22.680369,0.0472 6.276545,6.27642 6.276545,16.45258 0,22.72887 -3.138276,3.13815 -7.251258,4.70722 -11.36437,4.70722 v 10.71452 c 6.855317,0 13.710245,-2.61517 18.940705,-7.8455 10.4604,-10.46066 10.4604,-27.42074 -1.3e-4,-37.8814004 z"
+   inkscape:connector-curvature="0"
+   style="fill:#261e58;fill-opacity:0.94570136" />
+
+</svg>

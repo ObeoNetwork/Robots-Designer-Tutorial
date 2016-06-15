@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="mindstorms" version="11.0.0.201601261200">
+  <ownedViewpoints name="MindstormsViewpoint" label="Mindstorms" modelFileExtension="*.mindstorms">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FlowDiagram" label="Flow Diagram" initialisation="true" showOnStartup="true" domainClass="mindstorms.Flow" enablePopupBars="true">
+      <metamodel href="http://www.obeo.fr/dsl/mindstorms/1.0.0#/"/>
+      <validationSet name="Validation Rules">
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="Flow has at least one first instruction" level="WARNING" message="Missing first instruction" targetClass="mindstorms.Flow">
+          <audits auditExpression="aql:self.first&lt;>null"/>
+        </ownedRules>
+      </validationSet>
+      <layout xsi:type="description_1:CompositeLayout" direction="LeftToRight"/>
+      <defaultLayer name="MindstormsDiagramDefaultLayer" label="Default">
+        <nodeMappings name="FD_Action" deletionDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteElement']" labelDirectEdit="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditElement']" semanticCandidatesExpression="feature:instructions" domainClass="mindstorms.Action">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="aql:self.computeLabel()" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/fr.obeo.dsl.tuto.mindstorms.design/icons/ReturnToBase.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="FD_Start" deletionDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DoNotDeleteBegin']" semanticCandidatesExpression="aql:self" domainClass="mindstorms.Flow">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="Start" labelAlignment="LEFT" sizeComputationExpression="-1" workspacePath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Start.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="FD_Next" deletionDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteEdgeNext']" sourceMapping="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_If'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Reuse']" targetMapping="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_If'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Reuse']" targetFinderExpression="feature:next" reconnections="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='ReconnectNext']">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="10" showIcon="false">
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="FD_First" deletionDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteEdgeFirst']" sourceMapping="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Start']" targetMapping="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_If'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Reuse'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']" targetFinderExpression="feature:first" reconnections="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='ReconnectFirst']">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="FD_Choregraphy" detailDescriptions="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='NewFD']" deletionDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteElement']" labelDirectEdit="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditElement']" semanticCandidatesExpression="feature:instructions" doubleClickDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='OpenFlowDiagram']" domainClass="mindstorms.Choregraphy" childrenPresentation="List">
+          <subNodeMappings name="FD_ChoregraphyInstructions" deletionDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteElement']" labelDirectEdit="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditElement']" semanticCandidatesExpression="aql:self.getOrderedInstructions()" domainClass="mindstorms.Instruction">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="aql:self.computeLabel()" labelAlignment="LEFT" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='MindstormsColorsPalette']/@entries[name='MindstormsColor2']" labelSize="12" backgroundStyle="GradientTopToBottom" backgroundColor="//@userColorsPalettes[name='MindstormsColorsPalette']/@entries[name='MindstormsColor1']" foregroundColor="//@userColorsPalettes[name='MindstormsColorsPalette']/@entries[name='MindstormsColor1']">
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="FD_Reuse" deletionDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteElement']" labelDirectEdit="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditElement']" semanticCandidatesExpression="feature:instructions" doubleClickDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='OpenFlowDiagramFromReuse']" domainClass="mindstorms.Reuse" childrenPresentation="List">
+          <subNodeMappings name="FD_ReuseInstructions" deletionDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteElement']" labelDirectEdit="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditElement']" semanticCandidatesExpression="aql:self.choregraphy.getOrderedInstructions()" domainClass="mindstorms.Instruction">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="aql:self.computeLabel()" labelAlignment="LEFT" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='MindstormsColorsPalette']/@entries[name='MindstormsColor2']" labelSize="12" labelExpression="aql:self.computeLabel()" backgroundStyle="GradientTopToBottom" backgroundColor="//@userColorsPalettes[name='MindstormsColorsPalette']/@entries[name='MindstormsColor1']" foregroundColor="//@userColorsPalettes[name='MindstormsColorsPalette']/@entries[name='MindstormsColor1']">
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="FD_While" detailDescriptions="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='NewFD']" deletionDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteElement']" labelDirectEdit="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditElement']" semanticCandidatesExpression="feature:instructions" doubleClickDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='OpenFlowDiagram']" domainClass="mindstorms.While" childrenPresentation="List">
+          <subNodeMappings name="FD_WhileInstructions" label="While Instructions" deletionDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteElement']" labelDirectEdit="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditElement']" semanticCandidatesExpression="aql:self.getOrderedInstructions()" domainClass="mindstorms.Instruction">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="aql:self.computeLabel()" labelAlignment="LEFT" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='MindstormsColorsPalette']/@entries[name='MindstormsColor2']" labelSize="12" labelExpression="aql:self.computeLabel()" backgroundStyle="GradientTopToBottom" backgroundColor="//@userColorsPalettes[name='MindstormsColorsPalette']/@entries[name='MindstormsColor1']" foregroundColor="//@userColorsPalettes[name='MindstormsColorsPalette']/@entries[name='MindstormsColor1']">
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="FD_If" detailDescriptions="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='NewFD']" deletionDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteElement']" labelDirectEdit="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditElement']" semanticCandidatesExpression="feature:instructions" doubleClickDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='OpenFlowDiagram']" domainClass="mindstorms.If">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='MindstormsColorsPalette']/@entries[name='MindstormsColor2']" labelSize="12" labelExpression="aql:self.computeLabel()" backgroundStyle="GradientTopToBottom" backgroundColor="//@userColorsPalettes[name='MindstormsColorsPalette']/@entries[name='MindstormsColor1']" foregroundColor="//@userColorsPalettes[name='MindstormsColorsPalette']/@entries[name='MindstormsColor1']">
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
+          </style>
+        </containerMappings>
+        <toolSections name="MT_Edit" label="Edit">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="EditElement" label="Edit Element" inputLabelExpression="service:self.getEditLabel">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.editElement(arg0)"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteElement">
+            <element name="element">
+              <subVariables xsi:type="tool_1:AcceleoVariable" name="next" computationExpression="aql:element.next"/>
+              <subVariables xsi:type="tool_1:AcceleoVariable" name="previous" computationExpression="aql:element.previous"/>
+            </element>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:previous&lt;>null and next&lt;>null">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:previous">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="next" valueExpression="var:next"/>
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                      <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:previous=null or next=null">
+                  <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DoNotDeleteBegin" precondition="false">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteEdgeNext">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="next" valueExpression="aql:null"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteEdgeFirst">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="first" valueExpression="aql:null"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectNext">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="next" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="ReconnectFirst">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="first" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DiagramCreationDescription" name="NewFD" label="New Flow Diagram" titleExpression="aql:self.name + ' Detailed Diagram'" diagramDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']"/>
+            </initialOperation>
+            <containerViewVariable name="containerView"/>
+            <representationNameVariable name="diagramName"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="SwitchColor" label="Switch Color" precondition="aql:self.condition.oclIsKindOf(mindstorms::ColorSensor)">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.condition">
+                <subModelOperations xsi:type="tool_1:Switch">
+                  <cases conditionExpression="aql:self.isColor(mindstorms::Color::GREEN)">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="color" valueExpression="aql:'GREEN'"/>
+                  </cases>
+                  <cases conditionExpression="aql:self.isColor(mindstorms::Color::RED)">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="color" valueExpression="aql:'RED'"/>
+                  </cases>
+                  <cases conditionExpression="aql:self.isColor(mindstorms::Color::BLACK)">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="color" valueExpression="aql:'BLACK'"/>
+                  </cases>
+                  <default>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="color" valueExpression="aql:'BLACK'"/>
+                  </default>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="OpenFlowDiagram" label="Open Flow Diagram" mappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_If'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="OpenFlowDiagramFromReuse" label="Open Flow Diagram from Reuse" mappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Reuse']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.choregraphy">
+                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="MS_Actions" label="Actions" icon="/fr.obeo.dsl.tuto.mindstorms.design/icons/Actions_16px.png">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateDelay" label="Delay" nodeMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy']/@subNodeMappings[name='FD_ChoregraphyInstructions'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']/@subNodeMappings[name='FD_WhileInstructions']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Delay_16px.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.Delay" referenceName="instructions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="ms" valueExpression="1000"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateGoBackward" label="Go backward" nodeMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy']/@subNodeMappings[name='FD_ChoregraphyInstructions'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']/@subNodeMappings[name='FD_WhileInstructions']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/GoBackward_16px.png" extraMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Reuse']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.GoBackward" referenceName="instructions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="cm" valueExpression="50"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="infinite" valueExpression="false"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateGoForward" label="Go forward" nodeMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy']/@subNodeMappings[name='FD_ChoregraphyInstructions'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']/@subNodeMappings[name='FD_WhileInstructions']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/GoForward_16px.png" extraMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Reuse']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.GoForward" referenceName="instructions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="cm" valueExpression="50"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="infinite" valueExpression="false"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateGoTo" label="Go to" nodeMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy']/@subNodeMappings[name='FD_ChoregraphyInstructions'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']/@subNodeMappings[name='FD_WhileInstructions']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/GoTo_16px.png" extraMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Reuse']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.GoTo" referenceName="instructions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="x" valueExpression="0"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="y" valueExpression="0"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateReturnToBase" label="Base" nodeMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy']/@subNodeMappings[name='FD_ChoregraphyInstructions'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']/@subNodeMappings[name='FD_WhileInstructions']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/ReturnToBase_16px.png" extraMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Reuse']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.ReturnToBase" referenceName="instructions"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateGrab" label="Grab" nodeMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy']/@subNodeMappings[name='FD_ChoregraphyInstructions'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']/@subNodeMappings[name='FD_WhileInstructions']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Grab_16px.png" extraMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Reuse']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.Grab" referenceName="instructions"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateRelease" label="Release" nodeMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy']/@subNodeMappings[name='FD_ChoregraphyInstructions'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']/@subNodeMappings[name='FD_WhileInstructions']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Release_16px.png" extraMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Reuse']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.Release" referenceName="instructions"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateRotate_left" label="Left" nodeMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy']/@subNodeMappings[name='FD_ChoregraphyInstructions'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']/@subNodeMappings[name='FD_WhileInstructions']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Rotate_Left_16px.png" extraMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Reuse']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.Rotate" referenceName="instructions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="degrees" valueExpression="90"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateRotate_right" label="Right" nodeMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy']/@subNodeMappings[name='FD_ChoregraphyInstructions'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']/@subNodeMappings[name='FD_WhileInstructions']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Rotate_Right_16px.png" extraMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Reuse']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.Rotate" referenceName="instructions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="degrees" valueExpression="-90"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="MS_Flow" label="Conditional Flows" icon="/fr.obeo.dsl.tuto.mindstorms.design/icons/Flow_16px.png">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CreateWhile" label="While" containerMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']" extraMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_If'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.While" referenceName="instructions"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CreateIf" label="If" containerMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_If']" extraMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_If'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.If" referenceName="instructions"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="MT_Conditions" label="Conditions" icon="/fr.obeo.dsl.tuto.mindstorms.design/icons/If_16px.png">
+          <ownedTools xsi:type="tool:ToolGroup" name="Colors">
+            <tools xsi:type="tool_1:ToolDescription" name="MT_BLACK_COLOR_CONDITION" label="Black" precondition="aql:self.oclIsKindOf(mindstorms::ConditionalFlow)" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/ColorSensor_16px.png">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.setColorSensorCondition('black')"/>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="MT_GREEN_COLOR_CONDITION" label="Green" precondition="aql:self.oclIsKindOf(mindstorms::ConditionalFlow)" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/ColorSensorGreen_16px.png">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.setColorSensorCondition('green')"/>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool_1:ToolDescription" name="MT_Red_COLOR_CONDITION" label="Red" precondition="aql:self.oclIsKindOf(mindstorms::ConditionalFlow)" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/ColorSensorRed_16px.png">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.setColorSensorCondition('red')"/>
+              </initialOperation>
+            </tools>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="MT_TOUCH" label="Touch" precondition="aql:self.oclIsKindOf(mindstorms::ConditionalFlow)" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/TouchSensor_16px.png">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.setTouchSensorCondition()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="MT_DISTANCE" label="Distance" precondition="aql:self.oclIsKindOf(mindstorms::ConditionalFlow)" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Distance_16px.png">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.setUltrasonicSensorCondition('&lt; 50')"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="MT_REMOVE" label="Remove" precondition="aql:self.oclIsKindOf(mindstorms::ConditionalFlow) and self.condition&lt;>null" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Remove_16x.gif">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.condition">
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="MT_Choregraphies" label="Choregraphies" icon="/fr.obeo.dsl.tuto.mindstorms.design/icons/Choregraphy_16px.png">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CreateChoregraphy" label="Choregraphy" containerMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy']" extraMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.Choregraphy" referenceName="instructions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="NewChoregraphy"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CreateReuse" label="Reuse Existing Choregraphy" containerMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Reuse']" extraMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_Choregraphy'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@containerMappings[name='FD_While']">
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="selectedChoregraphy" candidatesExpression="aql:container.instructions->select(x|x.oclIsTypeOf(mindstorms::Choregraphy))" message="Select the procedure to reuse :"/>
+            </variable>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.Reuse" referenceName="instructions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="choregraphy" valueExpression="var:selectedChoregraphy"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Links">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateNext" edgeMappings="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@edgeMappings[name='FD_Next'] //@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@edgeMappings[name='FD_First']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.linkInstructions(target)"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::GoTo)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action']/@style" attributeName="workspacePath" value="/fr.obeo.dsl.tuto.mindstorms.design/icons/GoTo.svg"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::Rotate) and self.degrees >= 0">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action']/@style" attributeName="workspacePath" value="/fr.obeo.dsl.tuto.mindstorms.design/icons/Rotate_Left.svg"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::Rotate) and self.degrees &lt;= 0">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action']/@style" attributeName="workspacePath" value="/fr.obeo.dsl.tuto.mindstorms.design/icons/Rotate_Right.svg"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::Grab)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action']/@style" attributeName="workspacePath" value="/fr.obeo.dsl.tuto.mindstorms.design/icons/Grab.svg"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::Release)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action']/@style" attributeName="workspacePath" value="/fr.obeo.dsl.tuto.mindstorms.design/icons/Release.svg"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::Delay)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action']/@style" attributeName="workspacePath" value="/fr.obeo.dsl.tuto.mindstorms.design/icons/Delay.svg"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::GoBackward)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action']/@style" attributeName="workspacePath" value="/fr.obeo.dsl.tuto.mindstorms.design/icons/GoBackward.svg"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::GoForward)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='MindstormsViewpoint']/@ownedRepresentations[name='FlowDiagram']/@defaultLayer/@nodeMappings[name='FD_Action']/@style" attributeName="workspacePath" value="/fr.obeo.dsl.tuto.mindstorms.design/icons/GoForward.svg"/>
+          </vsmElementCustomizations>
+        </customization>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="fr.obeo.dsl.tuto.mindstorms.design.services.EditServices"/>
+    <ownedJavaExtensions qualifiedClassName="fr.obeo.dsl.tuto.mindstorms.design.services.LabelServices"/>
+    <ownedJavaExtensions qualifiedClassName="fr.obeo.dsl.tuto.mindstorms.design.services.FlowServices"/>
+  </ownedViewpoints>
+  <userColorsPalettes name="MindstormsColorsPalette">
+    <entries xsi:type="description:UserFixedColor" red="186" green="223" blue="225" name="MindstormsColor1"/>
+    <entries xsi:type="description:UserFixedColor" red="0" green="119" blue="136" name="MindstormsColor2"/>
+  </userColorsPalettes>
+</description:Group>

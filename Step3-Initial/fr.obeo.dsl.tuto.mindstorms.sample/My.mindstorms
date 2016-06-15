@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mindstorms:Choregraphy xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mindstorms="http://www.obeo.fr/dsl/mindstorms/1.0.0" first="//@instructions.0" name="Main">
+  <instructions xsi:type="mindstorms:GoTo" next="//@instructions.4" x="35"/>
+  <instructions xsi:type="mindstorms:Rotate" next="//@instructions.8" previous="//@instructions.6" degrees="130"/>
+  <instructions xsi:type="mindstorms:Rotate" next="//@instructions.3" previous="//@instructions.8" degrees="-80"/>
+  <instructions xsi:type="mindstorms:ReturnToBase" next="//@instructions.10" previous="//@instructions.2"/>
+  <instructions xsi:type="mindstorms:Delay" next="//@instructions.9" previous="//@instructions.0" ms="1000"/>
+  <instructions xsi:type="mindstorms:GoForward" next="//@instructions.7" previous="//@instructions.9" cm="50"/>
+  <instructions xsi:type="mindstorms:GoBackward" next="//@instructions.1" previous="//@instructions.7" cm="50"/>
+  <instructions xsi:type="mindstorms:Grab" next="//@instructions.6" previous="//@instructions.5"/>
+  <instructions xsi:type="mindstorms:Release" next="//@instructions.2" previous="//@instructions.1"/>
+  <instructions xsi:type="mindstorms:Choregraphy" next="//@instructions.5" previous="//@instructions.4" first="//@instructions.9/@instructions.0" name="C1">
+    <instructions xsi:type="mindstorms:Choregraphy" next="//@instructions.9/@instructions.1" first="//@instructions.9/@instructions.0/@instructions.0" name="C2">
+      <instructions xsi:type="mindstorms:Grab" next="//@instructions.9/@instructions.0/@instructions.2"/>
+      <instructions xsi:type="mindstorms:Release" next="//@instructions.9/@instructions.0/@instructions.3" previous="//@instructions.9/@instructions.0/@instructions.2"/>
+      <instructions xsi:type="mindstorms:GoForward" next="//@instructions.9/@instructions.0/@instructions.1" previous="//@instructions.9/@instructions.0/@instructions.0" cm="50"/>
+      <instructions xsi:type="mindstorms:GoBackward" previous="//@instructions.9/@instructions.0/@instructions.1" cm="50"/>
+    </instructions>
+    <instructions xsi:type="mindstorms:GoForward" previous="//@instructions.9/@instructions.0" cm="25"/>
+  </instructions>
+  <instructions xsi:type="mindstorms:Reuse" next="//@instructions.11" previous="//@instructions.3" choregraphy="//@instructions.9"/>
+  <instructions xsi:type="mindstorms:If" next="//@instructions.12" previous="//@instructions.10" first="//@instructions.11/@instructions.0">
+    <instructions xsi:type="mindstorms:Rotate" degrees="10"/>
+    <condition xsi:type="mindstorms:TouchSensor"/>
+    <elsif first="//@instructions.11/@elsif/@instructions.0">
+      <instructions xsi:type="mindstorms:Rotate" degrees="-10"/>
+      <condition xsi:type="mindstorms:ColorSensor" color="BLACK"/>
+      <elsif first="//@instructions.11/@elsif/@elsif/@instructions.0">
+        <instructions xsi:type="mindstorms:Rotate" degrees="20"/>
+        <condition xsi:type="mindstorms:UltrasonicSensor" value="10.0"/>
+      </elsif>
+    </elsif>
+  </instructions>
+  <instructions xsi:type="mindstorms:While" previous="//@instructions.11" first="//@instructions.12/@instructions.0">
+    <instructions xsi:type="mindstorms:GoForward" next="//@instructions.12/@instructions.1" cm="50"/>
+    <instructions xsi:type="mindstorms:Rotate" previous="//@instructions.12/@instructions.0" degrees="-45"/>
+    <condition xsi:type="mindstorms:UltrasonicSensor" operator="upperOrEqual" value="50.0"/>
+  </instructions>
+</mindstorms:Choregraphy>

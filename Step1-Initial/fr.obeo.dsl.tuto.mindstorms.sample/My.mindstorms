@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mindstorms:Choregraphy xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mindstorms="http://www.obeo.fr/dsl/mindstorms/1.0.0" first="//@instructions.0" name="Main">
+  <instructions xsi:type="mindstorms:Rotate" next="//@instructions.1" degrees="50"/>
+  <instructions xsi:type="mindstorms:ReturnToBase" previous="//@instructions.0"/>
+</mindstorms:Choregraphy>

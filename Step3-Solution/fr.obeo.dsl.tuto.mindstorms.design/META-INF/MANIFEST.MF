@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.obeo.dsl.tuto.mindstorms.design
+Bundle-SymbolicName: fr.obeo.dsl.tuto.mindstorms.design;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: fr.obeo.dsl.tuto.mindstorms.design.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.sirius,
+ org.eclipse.sirius.common.acceleo.aql,
+ fr.obeo.dsl.tuto.mindstorms;bundle-version="0.1.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

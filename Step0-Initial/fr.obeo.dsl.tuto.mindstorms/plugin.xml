@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated mindstorms -->
+      <package
+            uri="http://www.obeo.fr/dsl/mindstorms/1.0.0"
+            class="fr.obeo.dsl.tuto.mindstorms.MindstormsPackage"
+            genModel="model/mindstorms.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated mindstorms -->
+      <parser
+            type="mindstorms"
+            class="fr.obeo.dsl.tuto.mindstorms.util.MindstormsResourceFactoryImpl"/>
+   </extension>
+</plugin>

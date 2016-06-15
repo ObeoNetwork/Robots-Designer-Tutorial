@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50"
+   height="33.333332"
+   viewBox="0 0 50 33.333332"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="GoForward.svg">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="9.8333333"
+     inkscape:cx="10.711864"
+     inkscape:cy="8"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <path
+     style="fill:#261e58;fill-opacity:0.94509804"
+     d="M 33.333333,8.333333 V 0 L 50,16.666666 33.333333,33.333333 V 25 H 22.916667 V 8.333333 h 10.416666 z"
+     id="path2988" />
+  <path
+     style="fill:#261e58;fill-opacity:0.94509804"
+     d="M 18.75,8.333333 H 14.583333 V 25 H 18.75 V 8.333333 z"
+     id="path2986" />
+  <path
+     style="fill:#726aa5;fill-opacity:1"
+     d="M 10.3875,8.333333 H 6.25 V 25 h 4.1375 V 8.333333 z"
+     id="path2984" />
+  <path
+     style="fill:#726aa5;fill-opacity:1"
+     d="M 2.083333,8.333333 H 0 V 25 H 2.083333 V 8.333333 z"
+     id="path4" />
+</svg>
